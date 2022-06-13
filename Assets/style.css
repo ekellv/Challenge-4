@@ -1,0 +1,111 @@
+:root {
+    background-color: rgb(218, 221, 230);
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: rgb(8, 72, 129);
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 5.4rem;
+    color: rgb(8, 72, 129);
+    margin-bottom: 5rem;
+    margin-top: 100px;
+}
+
+h1 > span {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 4.2 rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+/* styling the quiz layout */
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.container > * {
+    width: 100%;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Buttons */
+
+.btn {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.2rem solid rgb(1, 5, 14);
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: rgb(235, 240, 247);
+    background-color: rgb(8, 72, 129);
+    border-radius: 25%;
+}
+
+#btn-highscores {
+    position: absolute;
+    left: 18px;
+    top: 18px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px rgb(120, 180, 223);
+    transform: translateY(-1px);
+    transition: transform 150ms;
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}

@@ -103,46 +103,16 @@ var questions = [
                 "="];
         answer: "="
     },
-    {
-        title: "";
-        choices:["", 
-                "", 
-                "", 
-                ""];
-        answer: ""
-    },
-    {
-        title: "";
-        choices:["", 
-                "", 
-                "", 
-                ""];
-        answer: ""
-    },
-    {
-        title: "";
-        choices:["", 
-                "", 
-                "", 
-                ""];
-        answer: ""
-    },
-    {
-        title: "";
-        choices:["", 
-                "", 
-                "", 
-                ""];
-        answer: ""
-    },
-    {
-        title: "";
-        choices:["", 
-                "", 
-                "", 
-                ""];
-        answer: ""
-    },
+]
+//    {
+//        title: "";
+//        choices:["", 
+//                "", 
+//               "", 
+//                ""];
+//        answer: ""
+//    },
+
 
     
 

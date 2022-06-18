@@ -1,8 +1,8 @@
 var landingPage = document.querySelector(".landing-page");
-var quizIntro = document.querySelector("#quizIntro");
+var quizIntro = document.querySelector("#quiz-intro");
 var timer = document.querySelector(".timer");
-var playButton = document.querySelector("#play-btn");
-var quizElement = document.querySelector(".quiz");
+var playButton = document.querySelector("#btn-play");
+var quizElement = document.querySelector("#quiz");
 var quizQuestion = document.querySelector("#quiz-question");
 var multipleChoices = document.querySelector(".multiple-choices");
 var rightOrWrong = document.querySelector("#right-or-wrong");
@@ -11,11 +11,97 @@ var finalScore = document.querySelector("#final-score");
 var playerInitials = document.querySelector("#player-initials");
 var submitScore = document.querySelector("#submit");
 
+var questions = [
+    {
+      title: "Which one is a looping structure in JavaScript?",
+      choices: ["All the below", "For", "While", "do-while loops"],
+      answer: "All the below"
+    },
+    {
+      title: "What are the two basic groups of data types in JavaScript?",
+      choices: [
+        "Primitive and attribute",
+        "Primitive and reference types",
+        "Reference types and attribute",
+        "None of the above"
+      ],
+      answer: "Primitive and reference types"
+    },
+    {
+      title: "Commonly used data types DO NOT include:",
+      choices: ["strings", "booleans", "alerts", "numbers"],
+      answer: "alerts"
+    },
+    {
+      title: "Boolean operators that can be used in JavaScript include:",
+      choices: [
+        "'And' Operator &&",
+        "'Or' Operator ||",
+        "'Not' Operator !",
+        "All the above"
+      ],
+      answer: "All the above"
+    },
+    {
+      title:
+        "Which one of these is not among the three different types of errors in JavaScript?",
+      choices: [
+        "Animation time errors",
+        "Load time errors",
+        "Run time errors",
+        "Logical Errors"
+      ],
+      answer: "Animation time errors"
+    },
+    {
+      title: "What is the data type of variables in JavaScript?",
+      choices: [
+        "Object data types",
+        "Function data type",
+        "None of the above",
+        "All of the above"
+      ],
+      answer: "Object data types"
+    },
+    {
+      title: "The condition in an if / else statement is enclosed within ____.",
+      choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
+      answer: "parentheses"
+    },
+    {
+      title: "Arrays in JavaScript can be used to store ____.",
+      choices: [
+        "numbers and strings",
+        "other arrays",
+        "booleans",
+        "all of the above"
+      ],
+      answer: "all of the above"
+    },
+    {
+      title:
+        "String values must be enclosed within ____ when being assigned to variables.",
+      choices: ["commas", "curly brackets", "quotes", "parentheses"],
+      answer: "quotes"
+    },
+    {
+      title:
+        "A very useful tool used during development and debugging for printing content to the debugger is:",
+      choices: ["JavaScript", "terminal / bash", "for loops", "console.log"],
+      answer: "console.log"
+    },
+    {
+      title: "What is the type of Pop up boxes available in JavaScript?:",
+      choices: ["Alert", "Confirm", "Prompt", "All the above"],
+      answer: "All the above"
+    }
+  ];
+
 // declaring variables to be globally accessible for several of the quiz functions
 // starting the questions array from its first element 
 var questionsIndex = 0; 
 // setting the amount of time the user will have to complete the quiz, which is the questions array times 10 seconds per question
-var quizTime = questions.length * 10;
+var quizTime = (questions.length) * 10;
 // timer variable 
 var timerStart;
 
@@ -28,7 +114,7 @@ function startQuiz() {
     quizElement.removeAttribute("class");
     
     // starting the timer to call the countdown function and decrement one second at a time
-    var timerStart = setInterval(countdown, 1000);
+    var timerStart = setInterval(timerStart, 1000);
     
     // displays the countdown 
     timer.textContent = quizTime;
@@ -60,7 +146,7 @@ function getNextQuestion() {
         // each button gets a click event listener, the results of which will be defined in the chooseAnAnswer function
         answerButton.onClick = answerQuestion;
         // actually display these elements on the page by appending them to the quiz question
-        multipleChoices.appendChild(viewQuestions);
+        quizQuestion.appendChild(answerButton);
     });
 }
 
@@ -134,7 +220,31 @@ function timerStart() {
 function saveHighScores() {
     var initials = playerInitials.value.trim();
     // get saved scores from user's local storage, or if there is none found, display an empty array
-    if (initials !=="") {
+    if (initials !== "") {
         var highScores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+    
+    // creates new high score element for the user 
+    var newScore = {
+        score: time, 
+        initials: initials
+    };
+
+    highScores.push(newScore);
+    window.localStorage.setItem("highScores", JSON.stringify(highScores));
+
+    window.location.href = "scores.html";
     }
 }
+
+function pressEnter(event) {
+    if (event.key === "Enter") {
+        saveHighScores();
+    }
+}
+
+
+submitScore.onClick = saveHighScores();
+
+playButton.onClick = startQuiz();
+
+playerInitials.onkeyup = pressEnter();

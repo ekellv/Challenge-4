@@ -15,25 +15,25 @@
     <div class="wrapper flex-center flex-column">
       <div id="start-screen" class="start">
         <h1>Test Your Knowledge!</h1>
-        <p>Prove you're on your way to becoming a coding master by answering several multiple choice questions. Every question you answer correctly will add to your score, but answer a question wrong and you'll lose ten seconds of valuable quiz time! Good luck!</p>
+        <p>Prove you're on your way to becoming a coding master by answering several multiple choice questions. Every question you answer correctly will keep your score intact, but answer a question wrong and you'll lose both ten whole points AND ten seconds of valuable quiz time! Good luck!</p>
         <button class="btn" id="btn-start">I'm Ready!</button>
       </div>
 
       <div id="questions" class="hide">
         <h2 id="question-title"></h2>
-        <div id="choices" class="choices"></div>
+        <div id="answer-options" class="answer-options"></div>
       </div>
 
-      <div id="end-screen" class="hide">
+      <div id="quiz-finished" class="hide">
         <h2>Great Work!</h2>
         <p>Your final score is: <span id="final-score"></span>.</p>
         <p>
-          Enter your initials: <input type="text" id="initials" max="3" />
+          Enter your initials: <input type="text" id="user-initials" max="3" />
           <button class="btn" id="submit">Submit</button>
         </p>
       </div>
 
-      <div id="feedback" class="feedback hide"></div>
+      <div id="right-wrong" class="right-wrong hide"></div>
     </div>
 
     <script src="JS\questions.js"></script>

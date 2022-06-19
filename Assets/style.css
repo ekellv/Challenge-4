@@ -1,5 +1,5 @@
 :root {
-    background-color: rgb(249, 251, 251);
+    background-color: rgb(229, 213, 239);
     font-size: 62.5%;
 }
 
@@ -8,7 +8,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    color: rgb(3, 52, 31);
+    color: rgb(175, 7, 155);
 }
 
 h1, h2, h3, h4 {
@@ -17,7 +17,7 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size:  54px;
-    color: rgb(2, 49, 29);
+    color: rgb(86, 5, 89);
     margin-bottom: 50px;
     margin-top: 100px;
 }
@@ -99,11 +99,11 @@ p {
     padding: 1rem 0;
     width: 20rem;
     text-align: center;
-    border: 0.2rem solid rgb(4, 43, 21);
+    border: 0.2rem solid rgb(2, 102, 110);
     margin-bottom: 1rem;
     text-decoration: none;
-    color: rgb(191, 222, 193);
-    background-color: rgb(34, 89, 52);
+    color: rgb(243, 214, 240);
+    background-color: rgb(80, 181, 203);
     border-radius: 20px;
 }
 
@@ -115,7 +115,7 @@ p {
 
 .btn:hover {
     cursor: pointer;
-    box-shadow: 4px 4px rgb(103, 161, 112);
+    box-shadow: 4px 4px rgb(80, 227, 212);
     transform: translateY(-1px);
     transition: transform 150ms;
 }

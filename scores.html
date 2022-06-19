@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device width, inital scale 1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie-edge" />
-        <title>Quiz Hall of Fame</title>
-        <link rel="stylesheet" href="Assets\style.css"/>
-    </head>
-    <body>
-        <div class = "landing-page">
-            <div class="flex-center flex-column">
-            <h1>Enter your initials to show off your score! Try again and see how well you can really do!</h1>
-            <ol class="high-scores"></ol>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Highscores</title>
 
-            <a href="index.html"><button class="btn">Go Back & Try Again!</button></a>
-            <button class="btn" id="high-scores">Clear High Scores</button>
-            </div>
-        </div>
-        <script src=""></script>
-    </body>
+    <link rel="stylesheet" href="Assets\style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper flex-center flex-column">
+      <h1>High Scores:</h1>
+      <ol id="highscores"></ol>
+
+      <a href="index.html"><button class="btn">Go Back & Try Again!</button></a>
+      <button class="btn" id="clear">Clear Highscores</button>
+    </div>
+
+    <script src="JS\highscores.js"></script>
+  </body>
 </html>

@@ -11,23 +11,9 @@
     color: rgb(175, 7, 155);
 }
 
-h1 {
-    font-size:  54px;
-    color: rgb(86, 5, 89);
-    margin-bottom: 50px;
-    margin-top: 100px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 42px;
-    margin-bottom: 4px;
-    font-weight: 700;
-    text-align: center;
-}
-
-
-/* styling the quiz layout */
+/*                     */
+/* Styling Quiz Layout */
+/*                     */
 
 .start-screen {
     width: 100vw;
@@ -36,10 +22,6 @@ h2 {
     justify-content: center;
     align-items: flex-start;
     text-align: center;
-}
-
-.landing-page > * {
-    width: 100%;
 }
 
 .flex-column {
@@ -60,16 +42,19 @@ h2 {
     text-align: center;
 }
 
-.hide {
-    display: none;
+h1 {
+    font-size:  54px;
+    color: rgb(86, 5, 89);
+    margin-bottom: 50px;
+    margin-top: 100px;
+    text-align: center;
 }
 
-.timer {
-    position: absolute;
-    right: 45px;
-    top: 18px;
-    font-size: 20px;
-    font-weight: 500;
+h2 {
+    font-size: 42px;
+    margin-bottom: 4px;
+    font-weight: 700;
+    text-align: center;
 }
 
 p {
@@ -81,70 +66,27 @@ p {
     text-align: center;
 }
 
-/* Buttons */
-
-.btn {
-    font-size: 16px;
-    font-weight: 500;
-    padding: 1rem 0;
-    width: 20rem;
-    text-align: center;
-    border: 0.2rem solid rgb(2, 102, 110);
-    margin-bottom: 1rem;
-    text-decoration: none;
-    color: rgb(243, 214, 240);
-    background-color: rgb(80, 181, 203);
-    border-radius: 20px;
-    justify-content: center;
-}
-
-#btn-start {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-#btn-highscores {
+/* this sets the timer element into the upper right corner of the page */
+.timer {
     position: absolute;
-    left: 45px;
+    right: 45px;
     top: 18px;
+    font-size: 20px;
+    font-weight: 500;
 }
 
-.btn:hover {
-    cursor: pointer;
-    box-shadow: 4px 4px rgb(80, 227, 212);
-    transform: translateY(-1px);
-    transition: transform 150ms;
+/* this hides the elements of the quiz the user is not currently accessing as they proceed through the quiz */
+.hide {
+    display: none;
 }
 
-.btn[disabled]:hover {
-    cursor: not-allowed;
-    box-shadow: none;
-    transform: none;
-}
-
+/* top margin pushes it away from the top of the webpage to the quiz questions don't interfere with the absolute positioned timer and score button */
 #questions {
     margin-top: 175px;
     width: 60%;
 }
 
-.answer-options button {
-    display: block;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 1rem 0;
-    width: 20rem;
-    text-align: center;
-    border: 0.2rem solid rgb(2, 102, 110);
-    margin-bottom: 1rem;
-    text-decoration: none;
-    color: rgb(243, 214, 240);
-    background-color: rgb(80, 181, 203);
-    border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
+/* same 175px margin keeps the elements in line with the quiz questions so content isn't bobbling around page */
 #quiz-finished {
     margin-top: 175px;
 }
@@ -161,6 +103,74 @@ li {
     font-weight: 400;
 }
 
+/* increasing size of initials input box just so it looks nicer on the page */
 input[type="text"] {
     font-size: 85%;
+}
+
+/*                */
+/* Button Styling */
+/*                */
+
+.btn, button {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.2rem solid rgb(2, 102, 110);
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: rgb(243, 214, 240);
+    background-color: rgb(80, 181, 203);
+    border-radius: 20px;
+
+}
+
+#btn-start {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* sets the button link to the high scores page in the upper left corner of the page */
+#btn-highscores {
+    position: absolute;
+    left: 45px;
+    top: 18px;
+}
+
+/* all buttons will appear with same cursor, whether or not they are links
+   all buttons will shift the smallest bit when hovered upon 
+*/
+.btn:hover, button:hover {
+    cursor: pointer;
+    box-shadow: 4px 4px rgb(80, 227, 212);
+    transform: translateY(-1px);
+    transition: transform 150ms;
+}
+
+/* when buttons are created or hidden in JS, their styling goes away as well */
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* styling for the buttons created in JS */
+.answer-options button {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.2rem solid rgb(2, 102, 110);
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: rgb(243, 214, 240);
+    background-color: rgb(80, 181, 203);
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }

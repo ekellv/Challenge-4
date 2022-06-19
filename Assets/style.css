@@ -128,7 +128,7 @@ p {
     width: 60%;
 }
 
-.choices button {
+.answer-options button {
     display: block;
     font-size: 16px;
     font-weight: 500;
@@ -145,6 +145,10 @@ p {
     margin-right: auto;
 }
 
+#quiz-finished {
+    margin-top: 175px;
+}
+
 ol {
     overflow: auto;
 
@@ -155,4 +159,8 @@ li {
     list-style: decimal inside none;
     font-size: 36px;
     font-weight: 400;
+}
+
+input[type="text"] {
+    font-size: 85%;
 }

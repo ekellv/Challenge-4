@@ -1,20 +1,24 @@
-var questionsDisplay = document.querySelector("#questions");
-var timerDisplay = document.querySelector("#time");
-var answerOptions = document.querySelector("#answer-options");
-var submitButton = document.querySelector("#submit");
-var startButton = document.querySelector("#btn-start");
-var userInitialsInput = document.querySelector("#user-initials");
-var rightWrong = document.querySelector("#right-wrong");
+// global variables for the DOM elements that will be accessed in multiple functions 
+// some are visible before quiz is begun, some are hidden until certain quiz functions run
+var questionsDisplay = document.querySelector("#questions"); // invisible to user until quiz start
+var timerDisplay = document.querySelector("#time"); // visible, not running until quiz start, set to 0
+var answerOptions = document.querySelector("#answer-options"); // invisible to user until quiz start
+var submitButton = document.querySelector("#submit"); // invisible to user until quiz is finished, submits scores to local storage
+var startButton = document.querySelector("#btn-start"); // visible to user upong page first loading, launches quiz
+var userInitialsInput = document.querySelector("#user-initials"); // invisible to user until quiz is finished, where user inputs their initials to be stored
+var rightWrong = document.querySelector("#right-wrong"); // invisible to user until quiz starts, only displays when user clicks on an answer to display right or wrong
 
-// quiz state variables
-var currentQuestionIndex = 0;
-var time = questions.length * 15;
-var timerId;
+// starting quiz variables (before quiz is run, or at quiz start)
+var currentQuestionIndex = 0; // index of questions will start at the first element in the array
+var time = questions.length * 10; // time will be the number of questions multiplied by ten to give the user a fair amount of time to answer
+var timerId; // timer element that will engage the countdown at quiz start 
 
+// function that will begin the quiz for the user, it switches the visibility of the elements on the quiz for the user 
+// ed when user clicks the start button element 
 function startQuiz() {
   // hide start screen
-  var startScreenEl = document.getElementById("start-screen");
-  startScreenEl.setAttribute("class", "hide");
+  var startScreen = document.getElementById("start-screen");
+  startScreen.setAttribute("class", "hide");
 
   // un-hide questions section
   questionsDisplay.removeAttribute("class");

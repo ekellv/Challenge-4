@@ -71,7 +71,7 @@ p {
     position: absolute;
     right: 45px;
     top: 18px;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 500;
 }
 
@@ -173,4 +173,23 @@ input[type="text"] {
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
+}
+
+/* this styles the homepage button that appears when the user is taking the quiz */
+#go-back-button {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 150px;
+}
+
+#highscores-list {
+    margin-bottom: 25px;
+}
+
+.restart-button {
+    margin-top: 18px;
 }

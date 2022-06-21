@@ -13,7 +13,7 @@
     <div class="timer"> Time Remaining: <span id="time">0 ⏱</span></div>
 
     <div class="wrapper flex-center flex-column">
-      <div id="start-screen" class="start">
+      <div id="quiz-info-paragraph" class="quiz-info">
         <h1>📖 Test Your Knowledge! 💻</h1>
         <p>Prove you're on your way to becoming a coding master by answering several multiple choice questions. Every question you answer correctly will keep your score intact, but answer a question wrong and you'll lose both ten whole points AND ten seconds of valuable quiz time! Good luck!</p>
         <button class="btn" id="btn-start">✏️ I'm Ready! ✏️</button>
@@ -24,11 +24,13 @@
         <div id="answer-options" class="answer-options"></div>
       </div>
 
+      <div><a href="index.html"><button id="go-back-button" class="hide" >Quiz Homepage</button></a></div>
+
       <div id="quiz-finished" class="hide">
         <h2>Great Work!</h2>
         <p>Your final score is: <span id="final-score"></span>.</p>
         <p>
-          Enter your initials: <input type="text" id="user-initials" max="3" />
+          Enter your initials: <input type="text" id="user-initials" maxlength="3"/>
           <button class="btn" id="submit">Submit</button>
         </p>
       </div>

@@ -10,3 +10,4 @@ The buttons containing the potential quiz answers are dynamically created with e
 
 At the end of the quiz, the time remaining now represents the score the user has earned. The user can input their initials and save their quiz score in the browser's local storage to try the quiz again. They can also clear their score from the local storage. From there, they can go back and retake the quiz, or simply admire the results of their hard work. 
 
+![Module4Screenshot](https://user-images.githubusercontent.com/103372188/174698526-7d2c8c28-837b-4486-b958-fdfc71d86627.png)

@@ -111,7 +111,7 @@ function questionClick() {
 
   // displays whether user is right or wrong using the tags in the HTML to create new elements
   rightWrong.setAttribute("class", "right-wrong");
-  // runs the display for two seconds (might play with timing, but one second is way too short) before once again hiding the display so it does not become a distraction to the user
+  // runs the display for a second (might play with timing) before once again hiding the display so it does not become a distraction to the user
   setTimeout(function() {
     rightWrong.setAttribute("class", "right-wrong hide");
   }, 1000);

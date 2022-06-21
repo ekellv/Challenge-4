@@ -9,19 +9,19 @@ var questions = [
       answer: "All of the Above"
     },
     {
-      title: "What are the two basic groups of data types in JavaScript?",
+      title: "Which do you use to enclose an array in Javascript?",
       choices: [
-        "Primitive and Attribute",
-        "Primitive and Reference Types",
-        "Reference Types and Attribute",
-        "None of the Above"
+        "Brackets",
+        "Quotation Marks",
+        "Parentheses",
+        "Two Forward Slashes"
       ],
-      answer: "Primitive and Reference Types"
+      answer: "Brackets"
     },
     {
-      title: "Commonly used data types DON'T include:",
-      choices: ["Strings", "Booleans", "Alerts", "Numbers"],
-      answer: "Alerts"
+      title: "True or False: Variables declared inside {} have global scope.",
+      choices: ["True", "False"],
+      answer: "False"
     },
     {
       title: "Boolean operators used in JavaScript include:",
@@ -35,24 +35,24 @@ var questions = [
     },
     {
       title:
-        "Which one of these is not among the three types of errors in JavaScript?",
+        "When using Javascript with arithmetic, the % will do what?",
       choices: [
-        "Animation Time Errors",
-        "Load Time Errors",
-        "Run Time Errors",
-        "Logical Errors"
+        "Return a percentage of a specific statistic",
+        "Cancel the function",
+        "Return the division remainder of a set of numbers",
+        "Present the user with a pop-up of the result of their query"
       ],
-      answer: "Animation Time Errors"
+      answer: "Return the division remainder of a set of numbers"
     },
     {
-      title: "In JavaScript, which of these is amongst the data type of variables?",
+      title: "Onchange, onclick, onmouseover, and keydown are examples of what?",
       choices: [
-        "Object Data Types",
+        "A For Loop",
         "Function Data Types",
-        "Neither of These",
-        "Both of These"
+        "Event Listeners",
+        "Elements to be used with Math.random"
       ],
-      answer: "Object Data Types"
+      answer: "Event Listeners"
     },
     {
       title: "In an if / else statement the condition must be enclosed within what?",
@@ -71,9 +71,9 @@ var questions = [
     },
     {
       title:
-        "What must you enclose string values within to assign them to variables?",
-      choices: ["Commas", "Curly brackets", "Quotes", "Parentheses"],
-      answer: "Quotes"
+        "DOM stands for:",
+      choices: ["Direct Output Material", "Dominic Toretto", "Done Over Principal", "Document Object Model"],
+      answer: "Document Object Model"
     },
     {
       title:
@@ -82,8 +82,13 @@ var questions = [
       answer: "console.log"
     },
     {
-      title: "What type of pop-ups are available in JavaScript?",
+      title: "True or False: You cannot use document.getElementbyId() to locate an HTML element",
       choices: ["Alert", "Confirm", "Prompt", "All of the Above"],
       answer: "All of the Above"
+    },
+    {
+      title: "True or False: You can change the a webpage's style through JavaScript.",
+      choices: ["True", "False"],
+      answer: "True"
     }
   ];

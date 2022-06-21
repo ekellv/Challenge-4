@@ -114,7 +114,7 @@ function questionClick() {
   // runs the display for two seconds (might play with timing, but one second is way too short) before once again hiding the display so it does not become a distraction to the user
   setTimeout(function() {
     rightWrong.setAttribute("class", "right-wrong hide");
-  }, 2000);
+  }, 1000);
 
   // go to the next question in the questions.js array
   currentQuestionIndex++;
